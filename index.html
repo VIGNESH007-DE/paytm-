@@ -3,25 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pay for Harvest Vehicle</title>
+    <title>Harvest Vehicle Payment</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 400px;
+            background: white;
+            padding: 20px;
+            margin: 50px auto;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #333;
+        }
+        p {
+            font-size: 16px;
+            color: #555;
+        }
+        .btn {
+            display: block;
+            width: 100%;
+            background: #0070f3;
+            color: white;
+            border: none;
+            padding: 12px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+        .btn:hover {
+            background: #0059c9;
+        }
+        .whatsapp-btn {
+            background: #25d366;
+        }
+        .whatsapp-btn:hover {
+            background: #1ebc58;
+        }
+    </style>
     <script>
-        function showSuccess() {
-            alert("Payment Successful! Wait for a call.");
+        function redirectToPaytm() {
+            alert("Redirecting to Paytm UPI. Please complete your payment.");
+            window.location.href = "upi://pay?pa=7010686652@ptyes&pn=Harvest%20Vehicle&mc=0000&tid=123456789&tr=ORDER123&tn=Harvest%20Vehicle%20Booking&am=500&cu=INR";
         }
     </script>
 </head>
 <body>
-    <h2>Harvest Vehicle Booking Payment</h2>
-    
-    <p>Click below to pay ₹500 via UPI:</p>
-    
-    <a href="upi://pay?pa=7010686652@ptyes&pn=YOUR_NAME&mc=0000&tid=123456789&tr=ORDER123&tn=Harvest Vehicle Booking&am=500&cu=INR" target="_blank" onclick="showSuccess()">
-        <button>Pay via Paytm UPI</button>
-    </a>
 
-    <h3>Confirm Payment</h3>
-    <a href="https://wa.me/7010686652?text=I've%20paid%20₹500%20for%20Harvest%20Vehicle.%20Here%20is%20the%20screenshot:" target="_blank">
-        <button>Send Payment Screenshot</button>
-    </a>
+    <div class="container">
+        <h2>Harvest Vehicle Booking</h2>
+        <p>Click below to pay ₹500 via UPI:</p>
+
+        <!-- Pay via UPI Button -->
+        <button class="btn" onclick="redirectToPaytm()">Pay via Paytm UPI</button>
+
+        <h3>Confirm Payment</h3>
+        <p>Send payment screenshot along with your address:</p>
+
+        <!-- WhatsApp Confirmation Button -->
+        <a class="btn whatsapp-btn" href="https://wa.me/7010686652?text=I've%20paid%20₹500%20for%20Harvest%20Vehicle.%20Here%20is%20the%20screenshot.%20My%20address%20is:%20" target="_blank">
+            Send Screenshot with Address
+        </a>
+    </div>
+
 </body>
 </html>
