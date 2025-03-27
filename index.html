@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pay for Harvest Vehicle</title>
+    <script>
+        function showSuccess() {
+            alert("Payment Successful! Wait for a call.");
+        }
+    </script>
+</head>
+<body>
+    <h2>Harvest Vehicle Booking Payment</h2>
+    
+    <p>Click below to pay ₹500 via UPI:</p>
+    
+    <a href="upi://pay?pa=7010686652@ptyes&pn=YOUR_NAME&mc=0000&tid=123456789&tr=ORDER123&tn=Harvest Vehicle Booking&am=500&cu=INR" target="_blank" onclick="showSuccess()">
+        <button>Pay via Paytm UPI</button>
+    </a>
+
+    <h3>Confirm Payment</h3>
+    <a href="https://wa.me/7010686652?text=I've%20paid%20₹500%20for%20Harvest%20Vehicle.%20Here%20is%20the%20screenshot:" target="_blank">
+        <button>Send Payment Screenshot</button>
+    </a>
+</body>
+</html>
